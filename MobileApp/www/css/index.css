@@ -1,0 +1,210 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:white;
+    font-family: system-ui, -apple-system, -apple-system-font, 'Segoe UI', 'Roboto', sans-serif;
+    font-size:12px;
+    height:100vh;
+    margin:0px;
+    padding:0px;
+    /* Padding to avoid the "unsafe" areas behind notches in the screen */
+    padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px) env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+                                   /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+                                      /* offset horizontal: half of image width and text area width */
+    }
+}
+
+.container-fluid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.center-wrap {
+    margin-top: 150px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-center-wrap {
+    margin-top: 90px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrap {
+
+    padding:75px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-label{
+    color:white;
+    font-size:small;
+}
+
+.center-splash-buttons{
+    margin-top:50%;
+}
+
+.btn-orange{
+    background-color:rgb(255, 95, 36);
+    color: white;
+    border:0;
+}
+
+.btn-categ{
+    background-color:#f5f5f5;
+    color: #353535;
+    height: 75px;
+    width: 200px;
+    border:0;
+}
+
+.btn-grey{
+    /* background-color:#353535; */
+    background-color: rgb(117, 117, 117);
+    color: white;
+    border:0;
+}
+
+.login-style{
+    position:absolute;
+    width: 100%;
+    background: #353535;
+    background-image:url("https://cdn.discordapp.com/attachments/760757739780571146/893474594218979369/productivity_transparent.png");
+}
+
+.signup-style{
+    position:absolute;
+    width: 100%;
+}
+
+
+.splash-style{
+    position:absolute;
+    width: 100%;
+}
+
+.signup-formbg{
+    background-color:#efefef;
+}
+
+.elementToFadeInAndOut {
+    animation: fadein 0.25s linear 1 forwards;
+    animation-fill-mode: forwards
+}
+
+@keyframes fadein {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.navtop {
+    margin:10px;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navtop-color{
+    background-color: #353535;
+    background-image: url("https://cdn.discordapp.com/attachments/760757739780571146/893474594218979369/productivity_transparent.png");
+}
+
+.btn-addtask{
+    margin-bottom: 20px;
+    margin-right: 20px;
+}
+
+.profile-bg{
+    background-color: #353535;
+    background-image: url("https://cdn.discordapp.com/attachments/760757739780571146/893474594218979369/productivity_transparent.png");
+    border-bottom: 75px solid #ffffff;
+    height: 300px;
+    width: 100%;
+}
+
+.profile-pd {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 215;
+}
+
+.progress{
+    background-color: #f1f1f1;
+    border-radius: 50px;
+}
+
+.progress-bar{
+    background: linear-gradient(90deg, #fa709a 0%, #fee140 100%);
+    border-radius: 50px;
+}
+
+.container-profile{
+    margin:25px;
+}
+
+.holder-cards{ 
+    margin: 10px;
+    padding-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: #353535;
+}
+
+.badge-bg-orange{
+    background-color:#FF5F24;
+    color: white;
+    border:0;
+}

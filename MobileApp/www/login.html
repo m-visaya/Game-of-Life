@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.all.min.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <title>Game of Life</title>
+    </head>
+    <body>
+        <div class="splash-style elementToFadeInAndOut" id="splash" style="display:block"> <!--splash screen display elements-->
+                <div class="container">  
+                    <div class="center-wrap">
+                        <img src="./img/gol_white.png" class="img-fluid" width="400">
+                    </div>
+                    <div class="d-grid gap-2 col-5 mb-5 mx-auto center-splash-buttons">
+                        <button type="button" id="btn-splash-login" name="btn-splash-login" onclick="swlogin()" class="btn btn-lg btn-orange rounded-pill mb-2">Log In</button>
+                        <button type="button" id="btn-splash-signup" name="btn-splash-signup" onclick="swsignup()" class="btn btn-lg btn-secondary rounded-pill">Sign Up</button>
+                    </div>
+                </div>
+        </div>
+
+        <div class="login-style elementToFadeInAndOut" id="login" style="display: none"> <!--login screen display elements-->
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="login-center-wrap">
+                        <img src="./img/gol_dark.png" class="img-fluid" width="300">
+                    </div>
+                    <div class="form-wrap">
+                        <form action="#" method="POST">
+                            <div class="row mb-3">
+                                    <label class="form-label text-center">Username</label>
+                                    <input type="text" id ="l-name" name="login-name" class="form-control form-control-lg shadow-none border-0 mb-4 rounded-pill" required>
+                                    <label class="form-label text-center">Password</label>
+                                    <input type="password" id ="l-pass" name="login-pass" class="form-control form-control-lg shadow-none border-0 rounded-pill" required>
+                            </div>
+                            <div class="d-grid gap-2 col-7 mb-5 mx-auto center-splash-buttons">
+                                <button type="button" id="btn-login" name="btn-login" onclick="login()" class="btn btn-lg btn-orange rounded-pill mb-2">Log In</button>
+                                <button type="button" id="btn-login-return" name="btn-login-return" onclick="swreturn()" class="btn btn-lg btn-secondary rounded-pill">Return</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="signup-style elementToFadeInAndOut" id="signup" style="display: none"> <!--signup screen display elements-->
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="login-center-wrap">
+                        <img src="./img/gol_white.png" class="img-fluid" width="300">
+                    </div>
+                    <div class="form-wrap">
+                        <form action="#" method="POST">
+                            <div class="row mb-3">
+                                    <label class="form-label text-center" style="color:#353535">Username</label>
+                                    <input type="text" id ="s-name" name="signup-name" class="form-control form-control-lg signup-formbg shadow-none border-0 mb-4 rounded-pill"  required>
+                                    <label class="form-label text-center" style="color:#353535">Password</label>
+                                    <input type="password" id ="s-pass" name="signup-pass" class="form-control form-control-lg signup-formbg shadow-none border-0 rounded-pill" required>
+                            </div>
+                            <div class="d-grid gap-2 col-7 mb-5 mx-auto center-splash-buttons">
+                                <button type="button" id="btn-signup" name="btn-signup" onclick="signup();" class="btn btn-lg btn-orange rounded-pill mb-2">Sign Up</button>
+                                <button type="button" id="btn-signup-return" name="btn-signup-return" onclick="swreturn()" class="btn btn-lg btn-secondary rounded-pill">Return</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="cordova.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

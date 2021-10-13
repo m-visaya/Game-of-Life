@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+        <meta name="color-scheme" content="light dark">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.7/dist/sweetalert2.all.min.js"></script>
+        <link rel="stylesheet" href="css/index.css">
+        <title>Game of Life</title>
+    </head>
+    <body>
+        <nav class="navbar navtop-color navbar-expand-lg navbar-light" style="height:70px"> <!--changes here-->
+        </nav>
+        <div class="elementToFadeInAndOut">
+            <div class="container p-5">
+                <h1 class="display-1 my-3" style="color:#FF5F24">Title</h1>
+                <input id = "titleCreate" class="form-control form-control-lg shadow-none border-0 rounded-pill" type="text" placeholder="Task Name">
+                <h1 class="display-1 my-3" style="color:#FF5F24">Value</h1>
+                <select id = "valueCreate" class="form-select select-lg border-0 rounded-pill" style="height:45px">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                  </select>
+                <h1 class="display-1 my-3" style="color:#FF5F24">Category</h1>
+                <select id="categoryCreate" class="form-select select-lg border-0 rounded-pill" style="height:45px">
+                    <option value="productivity">Productivity & Work</option>
+                    <option value="health">Health Related</option>
+                    <option value="creativity">Arts & Craft</option>
+                  </select>
+            </div>
+    
+            <nav class="navbar fixed-bottom">
+                <div class="container-fluid">
+                    <div class="ms-4 mb-2"><!--button return-->
+                        <img src="./img/return_btn.png" onclick="to_main();" id="btnReturn" class="btn-addtask image-fluid" width="125px">
+                    </div>
+                    <div class="mb-2"><!--button confirm-->
+                        <img src="./img/confirm_btn.png" onclick="create_task();" id="btnCreate" class="btn-addtask image-fluid" width="125px">
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <script src="cordova.js"></script>
+        <script src="js/create.js"></script>
+    </body>
+</html>
